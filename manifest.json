@@ -12,14 +12,12 @@
         "default_popup": "popup.html",
         "default_icon": {
             "64": "images/icon-64.png",
-            "128": "images/icon-128.png",
-            "1024": "images/icon.png"
+            "128": "images/icon-128.png"
         }
     },
     "icons": {
         "64": "images/icon-64.png",
-        "128": "images/icon-128.png",
-        "1024": "images/icon.png"
+        "128": "images/icon-128.png"
     },
     "content_scripts": [
         {
