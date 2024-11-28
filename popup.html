@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FeedBack</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 250px;
+            padding: 20px;
+            background-color: #2c2c2c;
+            color: #f1f1f1;
+            margin: 10;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        label {
+            font-size: 14px;
+            color: #a8d5ba;
+            /* Dark green accent */
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #a8d5ba;
+            /* Dark green accent */
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #3c3c3c;
+            color: #f1f1f1;
+        }
+
+        input[type="text"]::placeholder {
+            color: #aaa;
+        }
+
+        input[type="text"]:focus {
+            border-color: #a8d5ba;
+            /* Dark green accent */
+            outline: none;
+            box-shadow: 0 0 5px #a8d5ba;
+            /* Dark green accent */
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #3c3c3c;
+            color: #f1f1f1;
+        }
+
+        select:focus {
+            border-color: #a8d5ba;
+            /* Dark green accent */
+            outline: none;
+            box-shadow: 0 0 5px #a8d5ba;
+            /* Dark green accent */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>FeedBack</h2>
+        <div class="toggle-switch">
+            <label for="toggle">Run Extension:</label>
+            <input type="checkbox" id="toggle">
+        </div>
+        <div>
+            <label for="apiKey">API Key:</label>
+            <input type="text" id="apiKey" placeholder="Google AI Studio API Key">
+        </div>
+        <div>
+            <label for="modelSelect">Select Model:</label>
+            <select id="modelSelect">
+                <option value="gemini-1.5-pro">Gemini-1.5-Pro</option>
+                <option value="gemini-1.5-flash">Gemini-1.5-Flash</option>
+                <option value="gemini-1.5-flash-8b">Gemini-1.5-Flash-8b</option>
+                <option value="gemini-exp-1121">Gemini-Experimental</option>
+            </select>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

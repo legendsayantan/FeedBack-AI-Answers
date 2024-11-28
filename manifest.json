@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "FeedBack",
+    "version": "1.0",
+    "description": "AI question solver",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "64": "images/icon-64.png",
+            "128": "images/icon-128.png",
+            "1024": "images/icon.png"
+        }
+    },
+    "icons": {
+        "64": "images/icon-64.png",
+        "128": "images/icon-128.png",
+        "1024": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "feedback@sayantan.is-a.dev",
+          "strict_min_version": "109.0"
+        }
+      }
+      
+}
